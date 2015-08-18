@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/coffee">
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.Sandwich -5 sec\n2.Coffee -3 sec\n3.Cereal -3 sec\n4.Pizza -7 sec"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:weightSum="3">
+    <TextView android:text="Enter item id" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/et_itemid"
+        android:layout_weight="1"
+        android:textColor="#FFFFFF"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/bt_submit"
+        android:textColor="#FFFFFF"
+        android:alpha=".50"
+        android:background="#848484"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"/></LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>
